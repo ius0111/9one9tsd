@@ -1,0 +1,153 @@
+html{
+    scroll-behavior: smooth;
+}
+nav {
+    background-color: #8CABD9;
+    height: 60px;
+}   
+nav ul li{
+    text-align: center;
+    line-height: 60px;
+    color: white;
+}
+nav ul li a{
+    color: white;
+}
+div.scrollmenu {
+overflow: auto;
+white-space: nowrap;
+}
+div.scrollmenu a {
+display: inline-block;
+text-align: center;
+padding: 14px;
+text-decoration: none;
+}
+div.scrollmenu a img {
+max-height: 150px;
+}
+div.scrollmenu a:hover {
+background-color: #777;
+}
+
+* {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+text-decoration: none;
+list-style: none;
+}
+
+body {
+margin: 0;
+padding: 0;
+font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+float: left;
+width: 25%;
+padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+opacity: 0.8; 
+cursor: pointer; 
+}
+
+.column img:hover {
+opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+#parent{
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 500px;
+    max-height: 750px;
+}
+
+/* The expanding image container */
+.container1 {
+position: relative;
+display: none;
+}
+
+.container2 {
+display: none;
+position: absolute;
+top: 200px;
+left: -10px;
+max-width: 120px;
+}
+
+.container3 {
+display: none;
+position: absolute;
+top: 230px;
+left: -10px;
+max-width: 120px;
+}
+
+.container3-handle {
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: -23px;
+    max-width: 120px;
+    }
+
+/* Expanding image text */
+#imgtext {
+position: absolute;
+bottom: 15px;
+left: 15px;
+color: white;
+font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+position: absolute;
+top: 10px;
+right: 15px;
+color: white;
+font-size: 35px;
+cursor: pointer;
+}
+.option{
+    display: flex;
+    flex-wrap: wrap;
+    border: solid black 1px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.option div{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.option div a{
+    text-align: center;
+}
+.option div a img{
+    max-width: 200px;
+    max-height: 250px;
+}
+.title h4{
+    text-align: center;
+
+}

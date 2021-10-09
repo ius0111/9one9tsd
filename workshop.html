@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="workshop.css">
+    <script src="jquery.js" charset="utf-8"></script>
+    <title>9One9 Timber Solid Door</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><strong>9One9 Timber Solid Door</strong></a></li>
+        </ul>
+    </nav>
+
+    <br>
+
+    <div class="workshop">
+        <!-- MAIN (Center website) -->
+        <div class="main">
+            
+            <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('classic')"> Classic Door</button>
+            <button class="btn" onclick="filterSelection('double')"> Double Door</button>
+            <button class="btn" onclick="filterSelection('laminate')"> Laminate Door</button>
+            <button class="btn" onclick="filterSelection('veneer')"> Veneer Door</button>
+            <button class="btn" onclick="filterSelection('sliding')"> Sliding Door</button>
+            </div>
+            
+            <!-- Portfolio Gallery Grid -->
+            <div class="row">
+                <div class="column classic">
+                    <div class="content">
+                    <img src="Workshop/classic1.jpg" style="width:100%">
+                    </div>
+                </div>
+                <div class="column classic">
+                    <div class="content">
+                    <img src="Workshop/classic2.jpg" style="width:100%">
+                    </div>
+                </div>
+                <div class="column classic">
+                    <div class="content">
+                    <img src="Workshop/classic3.jpg" style="width:100%">
+                    </div>
+                </div>
+                <div class="column classic">
+                    <div class="content">
+                    <img src="Workshop/classic4.jpg" style="width:100%">
+                    </div>
+                </div>
+                <div class="column classic">
+                    <div class="content">
+                    <img src="Workshop/classic5.jpg" style="width:100%">
+                    </div>
+                </div>
+
+                <div class="column double">
+                    <div class="content">
+                    <img src="Workshop/double1.jpg" style="width:100%">
+                    </div>
+                </div>
+
+                <div class="column laminate">
+                    <div class="content">
+                    <img src="Workshop/laminate1.jpg" style="width:100%">
+                    </div>
+                </div>
+
+                <div class="column veneer">
+                    <div class="content">
+                    <img src="Workshop/veneer1.jpg" style="width:100%">
+                    </div>
+                </div>
+                
+                <div class="column sliding">
+                    <div class="content">
+                    <img src="Workshop/sliding1.jpg" style="width:100%">
+                    </div>
+                </div>
+
+                <!-- END GRID -->
+            </div>
+            
+        <!-- END MAIN -->
+        </div>
+
+    </div>
+    
+
+    <footer style="text-align: center; position: relative; bottom: 0;">
+        <a href="catalogue.pdf">Download Catalogue Here</a><br>
+        <a href="workshop.html">Our Workshop Here</a><br>
+        @2021 9ONE9 Timber Solid Door
+        <br>
+        Phone : +65 8429 0926
+        Email : 9one9tsd@gmail.com
+    </footer>
+
+</body>
+</html>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("column");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+}
+
+function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+}
+
+function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+    }
+    element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    });
+}
+</script>
